@@ -1,5 +1,6 @@
 # https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html
 
+require 'base64'
 require 'json'
 require 'logger'
 
@@ -30,11 +31,6 @@ def priority(severity_label)
   end
 end
 
-def alert_alias(title, product)
-  require 'base64'
-  Base64.encode64("#{title}-#{product}")
-end
-
 def handler(event:, context:)
   log.info("Processing #{event['detail']['findings'].length} findings")
 
@@ -46,7 +42,7 @@ def handler(event:, context:)
       region: ENV.fetch('AWS_REGION', 'ap-southeast-2'),
       product: finding['ProductArn'].split('/').last,
       message: finding['Title'].slice(0..ALERT_MESSAGE_LIMIT),
-      alias: alert_alias(finding['Title'], finding['ProductArn'].split('/').last),
+      alias: Base64.encode64("#{finding['Title']}-#{finding['ProductArn'].split('/').last}"),
       description: finding['Description'].slice(0..ALERT_DESCRIPTION_LIMIT),
       type: finding['Types'].join(','),
       severity: finding['Severity']['Label'],
