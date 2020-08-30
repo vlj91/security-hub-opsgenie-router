@@ -137,6 +137,76 @@
                         }
                     }
                 ]
+            },
+            {
+                "ProductArn": "arn:aws:securityhub:ap-southeast-2::product/aws/guardduty",
+                "Types": [
+                    "Software and Configuration Checks/Policy:IAMUser.RootCredentialUsage"
+                ],
+                "SourceUrl": "https://ap-southeast-2.console.aws.amazon.com/guardduty/home?region=ap-southeast-2#/findings?macros=current&fId=96ba1eb9768f6ac4a5f8c126b6cbfbbb",
+                "Description": "API DescribeMetricFilters was invoked using root credentials from IP address 1.157.201.206.",
+                "SchemaVersion": "2018-10-08",
+                "GeneratorId": "arn:aws:guardduty:ap-southeast-2:111111111111:detector/26ba194c1ec8c0a2e12abc3a2a82693e",
+                "FirstObservedAt": "2020-08-30T03:15:30Z",
+                "CreatedAt": "2020-08-30T03:39:36.094Z",
+                "RecordState": "ACTIVE",
+                "Title": "API DescribeMetricFilters was invoked using root credentials.",
+                "Workflow": {
+                    "Status": "NEW"
+                },
+                "LastObservedAt": "2020-08-30T04:09:03Z",
+                "Severity": {
+                    "Normalized": 20,
+                    "Label": "LOW",
+                    "Product": 2
+                },
+                "UpdatedAt": "2020-08-30T04:29:45.671Z",
+                "WorkflowState": "NEW",
+                "ProductFields": {
+                    "aws/guardduty/service/archived": "false",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/asnOrg": "Telstra Corporation Ltd",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/org": "Telstra Internet",
+                    "aws/guardduty/service/additionalInfo": "",
+                    "aws/guardduty/service/resourceRole": "TARGET",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/isp": "Telstra Internet",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/geoLocation/lat": "-33.8591",
+                    "aws/guardduty/service/count": "52",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/ipAddressV4": "1.157.201.206",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/country/countryName": "Australia",
+                    "aws/guardduty/service/action/awsApiCallAction/callerType": "Remote IP",
+                    "aws/guardduty/service/action/awsApiCallAction/serviceName": "logs.amazonaws.com",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/city/cityName": "Sydney",
+                    "aws/guardduty/service/action/awsApiCallAction/api": "DescribeMetricFilters",
+                    "aws/guardduty/service/serviceName": "guardduty",
+                    "aws/guardduty/service/evidence": "",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/geoLocation/lon": "151.2002",
+                    "aws/guardduty/service/detectorId": "26ba194c1ec8c0a2e12abc3a2a82693e",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/asn": "1221",
+                    "aws/guardduty/service/eventFirstSeen": "2020-08-30T03:15:30Z",
+                    "aws/guardduty/service/action/awsApiCallAction/affectedResources": "",
+                    "aws/guardduty/service/eventLastSeen": "2020-08-30T04:09:03Z",
+                    "aws/guardduty/service/action/actionType": "AWS_API_CALL",
+                    "aws/securityhub/FindingId": "arn:aws:securityhub:ap-southeast-2::product/aws/guardduty/arn:aws:guardduty:ap-southeast-2:111111111111:detector/26ba194c1ec8c0a2e12abc3a2a82693e/finding/96ba1eb9768f6ac4a5f8c126b6cbfbbb",
+                    "aws/securityhub/ProductName": "GuardDuty",
+                    "aws/securityhub/CompanyName": "Amazon"
+                },
+                "AwsAccountId": "111111111111",
+                "Id": "arn:aws:guardduty:ap-southeast-2:111111111111:detector/26ba194c1ec8c0a2e12abc3a2a82693e/finding/96ba1eb9768f6ac4a5f8c126b6cbfbbb",
+                "Resources": [
+                    {
+                        "Partition": "aws",
+                        "Type": "AwsIamAccessKey",
+                        "Details": {
+                            "AwsIamAccessKey": {
+                                "PrincipalId": "111111111111",
+                                "PrincipalName": "Root",
+                                "PrincipalType": "Root"
+                            }
+                        },
+                        "Region": "ap-southeast-2",
+                        "Id": "AWS::IAM::AccessKey:ASIA2YOGMENGNUBTF3OE"
+                    }
+                ]
             }
         ]
     }
