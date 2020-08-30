@@ -1,0 +1,143 @@
+{
+    "version": "0",
+    "id": "28f679d7-44ad-3695-f289-7070d2ad1c42",
+    "detail-type": "Security Hub Findings - Imported",
+    "source": "aws.securityhub",
+    "account": "111111111111",
+    "time": "2020-08-30T03:25:05Z",
+    "region": "ap-southeast-2",
+    "resources": [
+        "arn:aws:securityhub:ap-southeast-2::product/aws/guardduty/arn:aws:guardduty:ap-southeast-2:111111111111:detector/26ba194c1ec8c0a2e12abc3a2a82693e/finding/02ba1eb0dab24bea20c87055ed79d762"
+    ],
+    "detail": {
+        "findings": [
+            {
+                "ProductArn": "arn:aws:securityhub:ap-southeast-2::product/aws/guardduty",
+                "Types": [
+                    "Software and Configuration Checks/PenTest:S3.KaliLinux"
+                ],
+                "SourceUrl": "https://ap-southeast-2.console.aws.amazon.com/guardduty/home?region=ap-southeast-2#/findings?macros=current&fId=02ba1eb0dab24bea20c87055ed79d762",
+                "Description": "API GeneratedFindingAPIName was used to access S3 Bucket GeneratedFindingS3Bucket from a remote host with IP address 198.51.100.0 that is potentially running the Kali Linux penetration testing tool.",
+                "SchemaVersion": "2018-10-08",
+                "GeneratorId": "arn:aws:guardduty:ap-southeast-2:111111111111:detector/26ba194c1ec8c0a2e12abc3a2a82693e",
+                "FirstObservedAt": "2020-08-30T03:20:47.716Z",
+                "CreatedAt": "2020-08-30T03:20:47.716Z",
+                "RecordState": "ACTIVE",
+                "Title": "API GeneratedFindingAPIName was invoked from a remote host potentially running Kali Linux.",
+                "Workflow": {
+                    "Status": "NEW"
+                },
+                "LastObservedAt": "2020-08-30T03:20:47.716Z",
+                "Severity": {
+                    "Normalized": 20,
+                    "Label": "LOW",
+                    "Product": 2
+                },
+                "UpdatedAt": "2020-08-30T03:20:47.716Z",
+                "WorkflowState": "NEW",
+                "ProductFields": {
+                    "aws/guardduty/service/archived": "false",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/asnOrg": "GeneratedFindingASNOrg",
+                    "aws/guardduty/service/additionalInfo/unusual/userNames.0_": "GeneratedFindingUserName",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/org": "GeneratedFindingORG",
+                    "aws/guardduty/service/resourceRole": "TARGET",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/isp": "GeneratedFindingISP",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/geoLocation/lat": "0",
+                    "aws/guardduty/service/count": "1",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/ipAddressV4": "198.51.100.0",
+                    "aws/guardduty/service/additionalInfo/sample": "true",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/country/countryName": "GeneratedFindingCountryName",
+                    "aws/guardduty/service/action/awsApiCallAction/callerType": "Remote IP",
+                    "aws/guardduty/service/action/awsApiCallAction/serviceName": "GeneratedFindingAPIServiceName",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/city/cityName": "GeneratedFindingCityName",
+                    "aws/guardduty/service/action/awsApiCallAction/api": "GeneratedFindingAPIName",
+                    "aws/guardduty/service/serviceName": "guardduty",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/geoLocation/lon": "0",
+                    "aws/guardduty/service/detectorId": "26ba194c1ec8c0a2e12abc3a2a82693e",
+                    "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/asn": "-1",
+                    "aws/guardduty/service/eventFirstSeen": "2020-08-30T03:20:47.716Z",
+                    "aws/guardduty/service/action/awsApiCallAction/affectedResources/AWS::S3::Bucket": "GeneratedFindingS3Bucket",
+                    "aws/guardduty/service/eventLastSeen": "2020-08-30T03:20:47.716Z",
+                    "aws/guardduty/service/additionalInfo/unusual/hoursOfDay.0_": "1513609200000",
+                    "aws/guardduty/service/action/actionType": "AWS_API_CALL",
+                    "aws/securityhub/FindingId": "arn:aws:securityhub:ap-southeast-2::product/aws/guardduty/arn:aws:guardduty:ap-southeast-2:111111111111:detector/26ba194c1ec8c0a2e12abc3a2a82693e/finding/02ba1eb0dab24bea20c87055ed79d762",
+                    "aws/securityhub/ProductName": "GuardDuty",
+                    "aws/securityhub/CompanyName": "Amazon"
+                },
+                "AwsAccountId": "111111111111",
+                "Id": "arn:aws:guardduty:ap-southeast-2:111111111111:detector/26ba194c1ec8c0a2e12abc3a2a82693e/finding/02ba1eb0dab24bea20c87055ed79d762",
+                "Resources": [
+                    {
+                        "Partition": "aws",
+                        "Type": "AwsEc2Instance",
+                        "Details": {
+                            "AwsEc2Instance": {
+                                "Type": "m3.xlarge",
+                                "VpcId": "GeneratedFindingVPCId",
+                                "ImageId": "ami-99999999",
+                                "IpV4Addresses": [
+                                    "10.0.0.1",
+                                    "198.51.100.0"
+                                ],
+                                "SubnetId": "GeneratedFindingSubnetId",
+                                "LaunchedAt": "2016-08-02T02:05:06Z",
+                                "IamInstanceProfileArn": "arn:aws:iam::111111111111:example/instance/profile"
+                            }
+                        },
+                        "Region": "ap-southeast-2",
+                        "Id": "arn:aws:ec2:ap-southeast-2:111111111111:instance/i-99999999",
+                        "Tags": {
+                            "GeneratedFindingInstaceTag7": "GeneratedFindingInstaceTagValue7",
+                            "GeneratedFindingInstaceTag8": "GeneratedFindingInstaceTagValue8",
+                            "GeneratedFindingInstaceTag9": "GeneratedFindingInstaceTagValue9",
+                            "GeneratedFindingInstaceTag1": "GeneratedFindingInstaceValue1",
+                            "GeneratedFindingInstaceTag2": "GeneratedFindingInstaceTagValue2",
+                            "GeneratedFindingInstaceTag3": "GeneratedFindingInstaceTagValue3",
+                            "GeneratedFindingInstaceTag4": "GeneratedFindingInstaceTagValue4",
+                            "GeneratedFindingInstaceTag5": "GeneratedFindingInstaceTagValue5",
+                            "GeneratedFindingInstaceTag6": "GeneratedFindingInstaceTagValue6"
+                        }
+                    },
+                    {
+                        "Partition": "aws",
+                        "Type": "AwsIamAccessKey",
+                        "Details": {
+                            "AwsIamAccessKey": {
+                                "PrincipalId": "GeneratedFindingPrincipalId",
+                                "PrincipalName": "GeneratedFindingUserName",
+                                "PrincipalType": "IAMUser"
+                            }
+                        },
+                        "Region": "ap-southeast-2",
+                        "Id": "AWS::IAM::AccessKey:GeneratedFindingAccessKeyId"
+                    },
+                    {
+                        "Partition": "aws",
+                        "Type": "AwsS3Bucket",
+                        "Details": {
+                            "AwsS3Bucket": {
+                                "OwnerId": "CanonicalId of Owner",
+                                "CreatedAt": "2017-12-18T15:58:11.551Z",
+                                "ServerSideEncryptionConfiguration": {
+                                    "Rules": [
+                                        {
+                                            "ApplyServerSideEncryptionByDefault": {
+                                                "SSEAlgorithm": "SSEAlgorithm",
+                                                "KMSMasterKeyID": "arn:aws:kms:region:123456789012:key/key-id"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "Region": "ap-southeast-2",
+                        "Id": "arn:aws:s3:::bucketName",
+                        "Tags": {
+                            "foo": "bar"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
